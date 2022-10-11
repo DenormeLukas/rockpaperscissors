@@ -1,0 +1,253 @@
+body {
+
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: none;
+
+}
+
+.hidden {
+
+    display: none !important;
+    
+
+}
+
+.margin {
+
+    margin-bottom: 3rem;
+
+}
+
+.title {
+
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+
+}
+
+.title2 {
+
+    font-size: 1rem;
+    margin-bottom: 2rem;
+
+}
+
+.credits {
+
+    margin-top: 0;
+    margin-bottom: 2rem;
+
+}
+
+.sound-on, .sound-off {
+
+    opacity: 0.85;
+    position: fixed;
+    top: -3rem;
+    right: -2rem;
+    transform: scale(0.25);
+    background-image: url('../imgs/sound-sprite.png');
+    background-repeat: no-repeat;
+
+}
+
+.sound-on {
+
+    height: 15rem;
+    width: 17rem;
+    background-position: -0.5rem -0.5rem;
+
+}
+
+.sound-off {
+
+    height: 15rem;
+    width: 17rem;
+    background-position: -0.5rem -20.6rem;
+
+}
+
+.sound-on:hover, .sound-off:hover {
+    opacity: 0.5;
+    transition: 0.1s ease;
+}
+
+.countdown {
+
+position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 2;
+
+}
+
+.welcome {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.game {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.button_style {
+
+    color: black;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    border: 0.3rem solid black;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+
+}
+
+.button_style2 {
+
+    color: black;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    border: 0.3rem solid black;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    width: 500px;
+
+}
+
+.button_style:hover, .button_style2:hover {
+
+    color: white;
+    background-color: black;
+    transition: 0.3s ease;
+    cursor: none;
+
+}
+
+.result-container {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+#vs {
+
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20%;
+
+}
+
+.rps-paper, .rps-rock, .rps-scissors {
+
+    background-image: url('../imgs/rps-sprite.png');
+    background-repeat: no-repeat;
+    margin: 5rem;
+
+}
+
+.rps-paper {
+
+    height: 18rem;
+    width: 17rem;
+    background-position: -0.5rem -0.5rem;
+
+}
+
+
+.rps-rock {
+
+    height: 15rem;
+    width: 17rem;
+    background-position: -0.5rem -20rem;
+
+}
+
+
+.rps-scissors {
+
+    height: 15rem;
+    width: 17rem;
+    background-position: -0.5rem -37.5rem;
+
+}
+
+.cursor {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: .1s ease;
+  position: absolute;
+  z-index: 1;
+}
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid black;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
